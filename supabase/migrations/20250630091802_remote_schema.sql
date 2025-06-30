@@ -55,7 +55,7 @@ on "public"."memos"
 as permissive
 for select
 to public
-using (((user_id IS NULL) OR (user_id = app_auth.user_id())));
+using (((user_id IS NULL) OR (user_id = auth.user_id())));
 
 
 
