@@ -1,0 +1,8 @@
+node_modules/
+
+# Supabase
+.branches
+.temp
+.env
+supabase/functions/.env.production-zen-member
+supabase/functions/.env.staging-zen-member
