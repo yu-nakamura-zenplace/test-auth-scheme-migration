@@ -172,7 +172,8 @@ SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, false);
 -- Name: memos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."memos_id_seq"', 4, true);
+SELECT pg_catalog.setval('"public"."memos_id_seq"', 
+  (SELECT MAX(id) FROM "public"."memos") + 1, true);
 
 
 --
